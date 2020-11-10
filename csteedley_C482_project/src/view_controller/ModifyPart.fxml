@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ModifyPart" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="657.0" prefWidth="624.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <Label layoutX="28.0" layoutY="50.0" style="-fx-label-padding: 0;" text="Modify Part">
+        <font>
+            <Font name="System Bold" size="26.0" />
+        </font>
+    </Label>
+    <RadioButton fx:id="inHouseRadio" layoutX="244.0" layoutY="60.0" mnemonicParsing="false" onMouseClicked="#addInHouseRadio" text="In House">
+        <font>
+            <Font size="12.0" />
+        </font>
+        <toggleGroup>
+            <ToggleGroup fx:id="addPartToggle" />
+        </toggleGroup>
+    </RadioButton>
+    <RadioButton fx:id="outSourcedRadio" layoutX="346.0" layoutY="60.0" mnemonicParsing="false" onMouseClicked="#addOutSourcedRadio" text="Out Sourced" toggleGroup="$addPartToggle">
+        <padding>
+            <Insets left="20.0" />
+        </padding>
+        <font>
+            <Font size="14.0" />
+        </font>
+    </RadioButton>
+    <TextField fx:id="id" editable="false" layoutX="188.0" layoutY="115.0" onMouseEntered="#idDisabled" prefHeight="20.0" prefWidth="141.0" promptText="auto-gen Disabled" />
+    <TextField fx:id="name" layoutX="188.0" layoutY="165.0" prefHeight="11.0" prefWidth="141.0" />
+    <TextField fx:id="stock" layoutX="188.0" layoutY="215.0" prefHeight="14.0" prefWidth="141.0" />
+    <TextField fx:id="price" layoutX="188.0" layoutY="265.0" prefHeight="21.0" prefWidth="141.0" />
+    <TextField fx:id="max" layoutX="188.0" layoutY="315.0" prefHeight="25.0" prefWidth="141.0" />
+    <TextField fx:id="machineId" layoutX="188.0" layoutY="365.0" prefHeight="21.0" prefWidth="141.0" />
+    <TextField fx:id="min" layoutX="415.0" layoutY="316.0" prefHeight="25.0" prefWidth="102.0" />
+    <Label layoutX="357.0" layoutY="318.0" text="Min">
+        <font>
+            <Font size="15.0" />
+        </font>
+    </Label>
+    <Label layoutX="67.0" layoutY="117.0" text="ID">
+        <font>
+            <Font size="15.0" />
+        </font>
+    </Label>
+    <Label layoutX="64.0" layoutY="167.0" text="Name">
+        <font>
+            <Font size="15.0" />
+        </font>
+    </Label>
+    <Label layoutX="66.0" layoutY="217.0" text="Inv">
+        <font>
+            <Font size="15.0" />
+        </font>
+    </Label>
+    <Label layoutX="67.0" layoutY="267.0" text="Price">
+        <font>
+            <Font size="15.0" />
+        </font>
+    </Label>
+    <Label layoutX="69.0" layoutY="318.0" text="Max">
+        <font>
+            <Font size="15.0" />
+        </font>
+    </Label>
+    <Label fx:id="machineIdLabel" layoutX="69.0" layoutY="367.0" text="Machine ID">
+        <font>
+            <Font size="15.0" />
+        </font>
+    </Label>
+    <Button fx:id="cancelModPartButton" layoutX="407.0" layoutY="440.0" mnemonicParsing="false" onMouseClicked="#cancelModPart" prefHeight="21.0" prefWidth="55.0" text="Cancel" />
+    <Button fx:id="modSaveButton" graphicTextGap="0.0" layoutX="324.0" layoutY="440.0" mnemonicParsing="false" onMouseClicked="#saveModPart" prefHeight="25.0" prefWidth="66.0" text="Save" />
+</AnchorPane>
